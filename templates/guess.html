@@ -1,12 +1,12 @@
 $def with (chosen)
 
 $if chosen:
-    <p>I guess....</p>
-    <h1 id="guess">$chosen.name</h1>
-    <p>Was I right?</p>
+    <p class="h1">I guess....</p>
+    <h1 class="h1"  id="guess">$chosen.name</h1>
+    <p class="h3">Was I right?</p>
     <form action="/guess/$chosen.id" method="post" id="answer_form">
-        <input type="button" name="yes" value="yes">
-        <input type="button" name="no" value="no">
+        <input type="button" class="btn btn-success" name="yes" value="yes">
+        <input type="button" name="no" class="btn btn-danger" value="no">
         <input type="hidden" name="answer">
     </form>
     <p>Played $chosen.times_played times.
